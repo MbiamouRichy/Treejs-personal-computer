@@ -10,7 +10,7 @@
 
 </head>
 
-<body>
+<body style="overflow: hidden; background-color: gray;">
 
     <div id="info">
         <a href="https://threejs.org" target="_blank" rel="noopener">three.js</a> - FBXLoader test Coded by <a href="https://bento.me/mbiamourichy-">Mbiamou Richy</a>
@@ -57,7 +57,6 @@
             // scene
 
             scene = new THREE.Scene();
-            scene.background = new THREE.Color(0xbfe3dd);
             const ambientLight = new THREE.AmbientLight(0xffffff, 1);
             scene.add(ambientLight);
 
@@ -112,7 +111,7 @@
 
             //renderer
 
-            renderer = new THREE.WebGLRenderer();
+            renderer = new THREE.WebGLRenderer({alpha: true});
             renderer.setPixelRatio(window.devicePixelRatio * 2);
             renderer.setSize(window.innerWidth, window.innerHeight);
 
