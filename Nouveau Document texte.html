@@ -110,7 +110,7 @@
 
             }, onProgress, onError);
 
-            //
+            //renderer
 
             renderer = new THREE.WebGLRenderer();
             renderer.setPixelRatio(window.devicePixelRatio * 2);
@@ -119,7 +119,6 @@
             container.appendChild(renderer.domElement);
 
             document.addEventListener('mousemove', onDocumentMouseMove);
-            //
             window.addEventListener('resize', onWindowResize);
 
         }
@@ -156,9 +155,6 @@
             render();
 
         }
-
-
-
         function render() {
 		  renderer.render( scene, camera );
         }
